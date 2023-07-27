@@ -218,7 +218,9 @@ export default {
 		}
 
 		function SMSReset(){
-			recipients.value = [];
+			if(!props.batch_send){
+				recipients.value = [];
+			}
 			recipient.value = '';
 			custom_message.value = '';
 			return;
